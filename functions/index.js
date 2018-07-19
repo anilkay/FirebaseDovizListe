@@ -13,7 +13,7 @@ exports.dolarFunction=functions.https.onRequest((req,res) => {
                 // console.log(element.full_name+" "+element.buying);
                 readableversion+="<li>"+element.full_name+" "+element.buying+"</li>";
             });
-              res.send(readableversion+"</ul>");
+              res.send({content:readableversion+"</ul>"});
               res.end();
               return 1;
         })
